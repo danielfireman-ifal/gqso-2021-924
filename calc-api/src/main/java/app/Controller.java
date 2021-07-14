@@ -7,6 +7,6 @@ public class Controller {
 
   @GET
   public String sayHi() {
-    return "Welcome to Jooby!";
+    return "Bem-vidos(as) a API calculadora!";
   }
 }
