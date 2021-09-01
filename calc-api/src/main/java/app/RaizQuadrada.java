@@ -10,7 +10,7 @@ public class RaizQuadrada {
         try {
             double operando = Double.parseDouble(op);
 
-            // O endpoint de raiz quadrada vai retornar um status adequado
+            // O endpoint raiz quadrada vai retornar um status adequado
             // quando o parâmetro for um número menor que zero. 
             if (operando < 0) {
                 throw new BadRequestException(String.format("Parâmetro inválido:\"%s\"", op));    
