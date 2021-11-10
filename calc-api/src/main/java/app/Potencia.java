@@ -1,6 +1,19 @@
 package app;
 
+import io.jooby.annotations.*;
+import io.jooby.exception.*;
+
 public class Potencia {
+    @Path("/potencia/{base}/{expoente}")
+    @GET
+    public String rotaRaizQuadrada(@PathParam String base, @PathParam String expoente) throws BadRequestException {
+        try {
+            double pot = potencia(base, expoente);
+            return String.format("%.2f", pot);
+        } catch (IllegalArgumentException iae) {
+            throw new BadRequestException(iae.getMessage());
+        }
+    }
 
     public double potencia(String baseStr, String expoenteStr) throws IllegalArgumentException {
         double base = 0.;
