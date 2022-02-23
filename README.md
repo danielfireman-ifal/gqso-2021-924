@@ -1,3 +1,12 @@
-# Projeto Calculadora (GQSO 924 IFAL)
+# calc-api
 
-TODO(danielfireman-ifal): preencher com descrição do projeto
+Welcome to calc-api!!
+
+## running
+
+    mvn clean jooby:run
+
+## building
+
+    mvn clean package
+
