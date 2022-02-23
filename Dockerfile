@@ -8,4 +8,4 @@ COPY pom.xml /pom.xml
 RUN mvn -f /pom.xml clean package
 EXPOSE ${PORT}
 
-ENTRYPOINT java -jar /target/calc-api-1.0.0.jar server.port=${PORT}
+ENTRYPOINT ["java", "-jar", "/target/calc-api-1.0.0.jar"]
